@@ -32,7 +32,7 @@ cacheSolve <- function(x, ...) {
   data <- x$get()
   for (a in seq_len(nrow(data)))
     for (b in seq_len(ncol(data)))
-      i[a,b] = data[b,a]
+      i[a,b] <- data[b,a]
   
   x$setInverse(i)
   i
